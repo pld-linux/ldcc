@@ -1,5 +1,5 @@
 Summary:	Text UI for DCTC
-Summary(pl):	Tekstowy interfeks u¿ytkownika dla DCTC
+Summary(pl):	Tekstowy interfejs u¿ytkownika dla DCTC
 Name:		ldcc
 Version:	2.0.7
 Release:	1
