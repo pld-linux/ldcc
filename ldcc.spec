@@ -2,7 +2,7 @@ Summary:	Text UI for DCTC
 Summary(pl):	Tekstowy interfejs u¿ytkownika dla DCTC
 Name:		ldcc
 Version:	2.0.7
-Release:	3
+Release:	4
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://www.softservice.com.pl/store/ldcc/%{name}-%{version}.tgz
