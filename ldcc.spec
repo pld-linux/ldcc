@@ -7,7 +7,6 @@ License:	GPL
 Group:		Applications/Communications
 Source0:	http://www.softservice.com.pl/store/ldcc/%{name}-%{version}.tgz
 # Source0-md5:	1fbaa46a139880c6a91faf3dc5e678ff
-# Source0-size:	74060
 Patch0:		%{name}-signal.patch
 URL:		http://www.softservice.com.pl/ldcc/
 BuildRequires:	autoconf
