@@ -1,0 +1,12 @@
+--- ldcc-2.0.7/src/main.cc.orig	2003-02-26 17:19:50.000000000 +0000
++++ ldcc-2.0.7/src/main.cc	2004-08-01 17:47:46.000000000 +0000
+@@ -392,7 +392,9 @@
+ //   signal(SIGTERM, mysig);
+ //   signal(SIGUSR1, mysig);
+ //   signal(SIGUSR2, mysig);
++#ifdef SIGSTKFLT
+  signal(SIGSTKFLT, mysig);
++#endif
+  signal(SIGPWR, mysig);
+ 
+ 
