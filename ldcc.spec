@@ -2,7 +2,7 @@ Summary:	Text UI for DCTC
 Summary(pl):	Tekstowy interfejs u¿ytkownika dla DCTC
 Name:		ldcc
 Version:	2.0.7
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://www.softservice.com.pl/store/ldcc/%{name}-%{version}.tgz
@@ -13,6 +13,7 @@ BuildRequires:	automake
 BuildRequires:	librhtv-devel >= 2.0.1
 Requires:	dctc
 Requires:	librhtv >= 2.0.1
+ExclusiveArch:	%{ix86} amd64
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -29,7 +30,8 @@ LDCC jest konsolowym klientem sieci Direct Connect.
 %{__autoconf}
 %{__automake}
 %configure \
-	--with-tv-include=%{_includedir}/rhtvision
+	--with-tv-include=%{_includedir}/rhtvision \
+	--with-tv-lib=%{_libdir}
 
 %{__make}
 
