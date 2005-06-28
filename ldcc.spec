@@ -1,18 +1,19 @@
 Summary:	Text UI for DCTC
 Summary(pl):	Tekstowy interfejs u¿ytkownika dla DCTC
 Name:		ldcc
-Version:	2.0.7
-Release:	4
+%define		subver	beta
+Version:	2.1.0
+Release:	0.%{subver}.1
 License:	GPL
 Group:		Applications/Communications
-Source0:	http://www.softservice.com.pl/store/ldcc/%{name}-%{version}.tgz
-# Source0-md5:	1fbaa46a139880c6a91faf3dc5e678ff
+Source0:	http://www.softservice.com.pl/store/ldcc/%{name}-%{version}-%{subver}.tgz
+# Source0-md5:	2942aa7a107c94d85bd356bc1d554446
 Patch0:		%{name}-signal.patch
 URL:		http://www.softservice.com.pl/ldcc/
-BuildRequires:	autoconf
-BuildRequires:	automake
+#BuildRequires:	autoconf
+#BuildRequires:	automake
 BuildRequires:	librhtv-devel >= 2.0.1
-Requires:	dctc
+Requires:	dctc >= 0.85.9
 Requires:	librhtv >= 2.0.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -23,13 +24,14 @@ LDCC is a Linux console, text-based client for Direct Connect.
 LDCC jest konsolowym klientem sieci Direct Connect.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}-%{subver}
 %patch0 -p1
 
 %build
-%{__aclocal}
-%{__autoconf}
-%{__automake}
+%{__libtoolize}
+#%{__aclocal}
+#%{__autoconf}
+#%{__automake}
 %configure \
 	--with-tv-include=%{_includedir}/rhtvision \
 	--with-tv-lib=%{_libdir}
