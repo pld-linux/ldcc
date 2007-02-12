@@ -1,5 +1,5 @@
 Summary:	Text UI for DCTC
-Summary(pl):	Tekstowy interfejs uøytkownika dla DCTC
+Summary(pl.UTF-8):   Tekstowy interfejs u≈ºytkownika dla DCTC
 Name:		ldcc
 %define		subver	beta
 Version:	2.1.0
@@ -20,7 +20,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 LDCC is a Linux console, text-based client for Direct Connect.
 
-%description -l pl
+%description -l pl.UTF-8
 LDCC jest konsolowym klientem sieci Direct Connect.
 
 %prep
