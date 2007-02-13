@@ -1,5 +1,5 @@
 Summary:	Text UI for DCTC
-Summary(pl.UTF-8):   Tekstowy interfejs użytkownika dla DCTC
+Summary(pl.UTF-8):	Tekstowy interfejs użytkownika dla DCTC
 Name:		ldcc
 %define		subver	beta
 Version:	2.1.0
